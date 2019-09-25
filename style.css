@@ -10,13 +10,9 @@ footer {
     text-align: center;
 }
 
-.test {
-    background: blue;
-    height: 300px;
-    width: 100px;
-}
 
-#content-1 {
+
+#content-head {
     color: black;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 2em;
@@ -25,15 +21,17 @@ footer {
     width: 100%;
 }
 
-#content-2 {
+#content-1,
+#content-2,
+#content-3 {
     background: black;
+    border-bottom: 1px solid white;
     color: white;
     font-size: 1em;
-    height: 100px;
+    height: 300px;
     margin: auto;
     padding: 1em;
-    text-align: center;
-    width: 25%;
+    width: 80%;
 }
 
 #header-container {
@@ -53,10 +51,16 @@ footer {
     height: auto;
 }
 
+/* in mobile, items will be in a vertical column*/
 #main-container {
+    align-items: center;
     background: transparent;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin: auto;
+    text-align: center;
+    width: 80%;
 }
 
 #navigation {
@@ -80,5 +84,23 @@ footer {
 */
 
 @media(min-width: 800px) {
+
+    /* in desktop, items will be in a horizontal row*/
+
+    #content-1,
+    #content-2,
+    #content-3 {
+        background: black;
+        color: white;
+        font-size: 1em;
+        height: 100px;
+        margin: auto;
+        padding: 1em;
+        width: 25%;
+}
+
+    #main-container {
+        flex-direction: row;
+    }
 
 }
