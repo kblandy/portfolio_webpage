@@ -1,0 +1,84 @@
+body {
+    background: url("images/black_mamba.png");
+    background-repeat: repeat;
+}
+
+footer {
+    color: white;
+    margin-bottom: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+.test {
+    background: blue;
+    height: 300px;
+    width: 100px;
+}
+
+#content-1 {
+    color: black;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+#content-2 {
+    background: black;
+    color: white;
+    font-size: 1em;
+    height: 100px;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    width: 25%;
+}
+
+#header-container {
+    background: white;
+    color: black;
+    height: 150px;
+    width: 100%;
+}
+
+#header-div {
+    height: 50vh;
+    border-bottom: white 1px solid;
+}
+
+#icon {
+    width: 40px;
+    height: auto;
+}
+
+#main-container {
+    background: transparent;
+    width: 80%;
+    margin: auto;
+}
+
+#navigation {
+    background: white;
+
+}
+
+
+#tiny-header {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-top: 0;
+}
+
+
+/*
+
+|| MEDIA QUERIES ||
+
+*/
+
+@media(min-width: 800px) {
+
+}
