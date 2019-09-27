@@ -4,11 +4,7 @@
 }    
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, .89),
-                                rgba(252, 252, 252, 0)
-                                ),   
-                url("images/dark_texture/black_thread.png");
-    background-repeat: repeat;
+    background: url("images/light_texture/linen.png");
 }
 
 body,
@@ -18,37 +14,64 @@ html {
 
 footer {
     color: white;
-    background: black;
+    background: transparent;
+    padding-top: 20px;
     text-align: center;
     width: 100%;
     z-index: 100;
 
 }
 
+p {
+    line-height: 2em;
+    height: 100%;
+    margin-top: 2px;
+}
+
+.header-text,
+.header-2-text {
+    
+}
+
+.header-text {
+    font-size: 60px;
+    font-family: 'Megrim', cursive;
+    font-weight: bold;
+    letter-spacing: 20px;
+    text-shadow: 2px 1px 1px rgb(152, 152, 153);
+}
+
+/*font-family: 'Megrim', cursive;
+font-family: 'Dorsa', sans-serif;*/
+
+.header-2-text {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 35px;
+    font-weight: lighter;
+    margin-top: 30px;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 1px rgb(152, 152, 153);
+}
+
 #content-head {
     color: black;
-    font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 2em;
     padding-top: 4em;
     text-align: center;
-    text-shadow: 1px 1px 1px rgb(152, 152, 153);
     width: 100%;
 }
 
-#content-1,
-#content-2,
-#content-3 {
-    background: url("images/light_texture/linen.png");
+#content-1 {
+    background: transparent;
     color: black;
-    font-size: 1em;
-    height: 300px;
-    margin-bottom: 20px;
-    padding: 1em;
-    width: 90%;
+    height: 100%;
+    margin: auto;
+    width: 100%;
 }
 
+
 #footer-container {
-    background: black;
+    background: url("images/dark_texture/dark_geometric.png");
     height: 100px;
     margin: auto;
     position: relative;
@@ -74,16 +97,36 @@ footer {
     height: auto;
 }
 
+#img-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.89),
+                                rgba(0, 0, 0, 0)
+                                ),
+                url("images/mushroom.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px white solid;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 300px;
+
+}
+
 /* in mobile, items will be in a vertical column*/
 #main-container {
     align-items: center;
     background: transparent;
+    border-top: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: auto;
-    text-align: center;
-    width: 80%;
+    padding-bottom: 40px;
+    text-align: justify;
+    width: 90%;
+
 }
 
 #navigation {
@@ -115,25 +158,37 @@ footer {
         background: linear-gradient(rgba(0, 0, 0, 0.89),
                                     rgba(252, 252, 252, 0),
                                     ),   
-                    url("images/dark_texture/black_thread.png");
+                    url("images/light_texture/linen.png");
         background-repeat: repeat;
     }
 
-    /* in desktop, items will be in a horizontal row*/
+    p {
+        padding-left: 20px;
+    }
 
-    #content-1,
-    #content-2,
-    #content-3 {
+    /*  in desktop, items will be in a horizontal row
+        creates white line to left of text in desktop
+    */
+
+    #content-1 {
+        border-top: none;
+        border-left: 1px solid black;
         font-size: 1em;
-        height: 200px;
-        padding: 2em;
-        width: 25%;
-}
+        height: 60%;
+        margin-left: 250px;
+        padding-left: 20px;
+        width: 50%;
+    }
+    #header-container {
+        height: 100vh;
+    }
 
     #main-container {
         flex-direction: row;
+        border: none; /*removes line from top*/
         /*this height resolves floating footer*/
-        height: 65vh;
+        height: 70vh;
+        justify-content: space-between;
     }
 
 }
