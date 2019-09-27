@@ -1,5 +1,6 @@
 var arrowButton = $(".arrow");
 var mainContent = $("#main-container");
+var scrollDiv = $("#empty-div");
 
 //adds gentle scrolling when arrow icon is clicked
 $(document).ready(function(){
@@ -9,11 +10,11 @@ $(document).ready(function(){
         event.preventDefault();
   
         // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
-          scrollTop: mainContent.offset().top
+          scrollTop: scrollDiv.offset().top
         }, 900, function(){
      
         });
-      }); // End if
+      }); 
     });
