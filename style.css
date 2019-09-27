@@ -34,24 +34,59 @@ p {
 }
 
 .header-text {
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Megrim', cursive;
     font-weight: bold;
-    letter-spacing: 20px;
+    letter-spacing: 12px;
     text-shadow: 2px 1px 1px rgb(152, 152, 153);
 }
 
-/*font-family: 'Megrim', cursive;
-font-family: 'Dorsa', sans-serif;*/
-
 .header-2-text {
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: lighter;
-    margin-top: 30px;
+    margin-top: 50px;
     letter-spacing: 5px;
     text-shadow: 1px 1px 1px rgb(152, 152, 153);
 }
+
+/*ARROW ANIMATION*/
+  .arrow{
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+  .arrow span{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-bottom: 5px solid black;
+      border-right: 5px solid black;
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: animate 2s infinite;
+  }
+  .arrow span:nth-child(2){
+      animation-delay: -0.2s;
+  }
+  .arrow span:nth-child(3){
+      animation-delay: -0.4s;
+  }
+  @keyframes animate {
+      0%{
+          opacity: 0;
+          transform: rotate(45deg) translate(-20px,-20px);
+      }
+      50%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 0;
+          transform: rotate(45deg) translate(20px,20px);
+      }
+  }
+/* END ARROW ANIMATION*/
 
 #content-head {
     color: black;
@@ -82,7 +117,7 @@ font-family: 'Dorsa', sans-serif;*/
 #header-container {
     background: url("images/light_texture/linen.png");
     color: black;
-    height: 50vh;
+    height: 100vh;
     margin-top: 70px;
 
 }
@@ -105,7 +140,6 @@ font-family: 'Dorsa', sans-serif;*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px white solid;
     border-radius: 50%;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -118,7 +152,6 @@ font-family: 'Dorsa', sans-serif;*/
 #main-container {
     align-items: center;
     background: transparent;
-    border-top: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -135,6 +168,7 @@ font-family: 'Dorsa', sans-serif;*/
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 110;
 }
 
 
@@ -166,6 +200,23 @@ font-family: 'Dorsa', sans-serif;*/
         padding-left: 20px;
     }
 
+    .header-text {
+        font-size: 60px;
+        font-family: 'Megrim', cursive;
+        font-weight: bold;
+        letter-spacing: 20px;
+        text-shadow: 2px 1px 1px rgb(152, 152, 153);
+    }
+    
+    .header-2-text {
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 25px;
+        font-weight: lighter;
+        margin-top: 30px;
+        letter-spacing: 5px;
+        text-shadow: 1px 1px 1px rgb(152, 152, 153);
+    }
+
     /*  in desktop, items will be in a horizontal row
         creates white line to left of text in desktop
     */
@@ -178,9 +229,6 @@ font-family: 'Dorsa', sans-serif;*/
         margin-left: 250px;
         padding-left: 20px;
         width: 50%;
-    }
-    #header-container {
-        height: 100vh;
     }
 
     #main-container {
