@@ -1,6 +1,17 @@
 var arrowButton = $(".arrow");
 var mainContent = $("#main-container");
 var scrollDiv = $("#empty-div");
+var navIcon = $("#icon");
+
+
+navIcon.on('click', function(event) {
+    //when icon is clicked, links will open
+    //to the side
+    //will need to add link div thing and class "hide"
+    //slide() hide/show()
+});
+
+
 
 //adds gentle scrolling when arrow icon is clicked
 $(document).ready(function(){

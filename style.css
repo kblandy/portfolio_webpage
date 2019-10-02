@@ -16,17 +16,44 @@ html {
 footer {
     color: white;
     background: transparent;
+    height: 100%;
     padding-top: 20px;
     text-align: center;
     width: 100%;
     z-index: 100;
-
 }
 
 p {
     line-height: 2em;
     height: 100%;
     margin-top: 2px;
+}
+
+.bottom-foot-content {
+    border: 1px white solid;
+    margin: auto;
+    font-size: 15px;
+}
+
+.footer-content {
+    width: 25%;
+}
+
+.footer-content-container {
+    border: 1px solid whitesmoke;
+    height: 50vh;
+    margin-bottom: 30px;
+}
+
+.footer-main-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.head-footer {
+    font-family: 'Megrim', cursive;
+    font-size: 30px;
 }
 
 .header-text,
@@ -43,12 +70,19 @@ p {
 }
 
 .header-2-text {
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 20px;
     font-weight: lighter;
     margin-top: 50px;
     letter-spacing: 5px;
     text-shadow: 1px 1px 1px rgb(152, 152, 153);
+}
+
+/*
+Hides, will be shown when nav icon is clicked
+*/
+.hidden {
+    display: none;
 }
 
 /*ARROW ANIMATION*/
@@ -114,7 +148,7 @@ empty-div maintains visual appeal with scroll down feature
 
 #footer-container {
     background: url("images/dark_texture/dark_geometric.png");
-    height: 100px;
+    height: auto;
     margin: auto;
     position: relative;
     text-align: center;
@@ -178,6 +212,15 @@ empty-div maintains visual appeal with scroll down feature
     z-index: 110;
 }
 
+/*
+#nav-div {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    margin-top: 100px;
+    text-align: right;
+}
+*/
 
 #tiny-header {
     color: black;
